@@ -1,12 +1,11 @@
-import './Expentseitems.css'
+import './ExpenseItems.css'
 
-const Expentseitems = (props) => {
+const ExpenseItems = (props) => {
     
-    console.log(props)
-    console.log(props.data)
+    
     return (
         <div className='expense-item'>
-            <div>{props.data.data.toString()}</div>
+            <ExpenseData data={props.data.data}/>
             <div className='expense-item_description'>
                 <h2>{props.data.title}</h2>
                 <div className='expense-item_price'>€{props.data.price.toFixed(2)}</div>
@@ -16,4 +15,4 @@ const Expentseitems = (props) => {
     
 }
 
-export default Expentseitems;
+export default ExpenseItems;
