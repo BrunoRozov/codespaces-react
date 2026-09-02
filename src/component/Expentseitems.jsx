@@ -1,10 +1,12 @@
+import './Expentseitems.css'
+
 const Expentseitems = () => {
     return (
-        <div>
+        <div className='expense-item'>
             <div>Data</div>
-            <div>
+            <div className='expense-item_description'>
                 <h2>Title</h2>
-                <div>Price</div>
+                <div className='expense-item_price'>Price</div>
             </div>
         </div>
     )
