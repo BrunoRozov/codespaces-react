@@ -12,9 +12,9 @@ const ExpenseItems = (props) => {
                 <div>{day}</div>
                 <div>{year}</div>
             </div>
-                <div className='expense-item_description'>
+                <div className='expense-item__description'>
                     <h2>{props.data.title}</h2>
-                    <div className='expense-item_price'>€{props.data.price.toFixed(2)}</div>
+                    <div className='expense-item__price'>€{props.data.price.toFixed(2)}</div>
                 </div>
         </div>
     )
