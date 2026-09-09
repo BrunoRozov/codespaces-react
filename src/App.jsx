@@ -1,15 +1,15 @@
 import'./App.css';
-import ExpenseItem from './component/Expenseitem';
+import ExpenseItem from './component/ExpenseItem';
 
 const App = () => {
     const expenses = [
         {
-            data: new Date(2024, 10, 12),
+            date: new Date(2024, 10, 12),
             title: 'New book',
             price: 30.99
         },
         {
-            data: new Date(2024, 10, 12),
+            date: new Date(2024, 10, 12),
             title: 'New jeans',
             price: 99.99
         }
