@@ -37,7 +37,10 @@ const ExpenseForm = (props) => {
             price: enterdPrice,
             date: new Date(enterdDate)
         }
+        props.onSaveExpenseData(expenseData)
         setEnteredTitle('')
+        setEnteredPrice('')
+        setEnteredDate('')
     }
 
     return (
@@ -53,13 +56,20 @@ const ExpenseForm = (props) => {
                 </div>
                 <div className="new-expense__control">
                     <label>Price</label>
-                    <input type="number" min="0" step="0.01"
-                    onChange={priceChangeHandler} />
+                    <input
+                     type="number"
+                     min="0"
+                     step="0.01"
+                     onChange={priceChangeHandler}
+                     value={userInput.enteredPrice}
+                    />
                 </div>
                 <div className="new-expense__control">
                     <label>Date</label>
                     <input type="date" min="2024-11-12" max="2026-01-31"
-                    onChange={dateChangeHandler} />
+                        onChange={dateChangeHandler}
+                        value={userInput.enteredDate}
+                    />
                 </div>
             </div>
             <div className="new-expense__actions">
