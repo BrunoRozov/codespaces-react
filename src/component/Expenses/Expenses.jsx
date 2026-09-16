@@ -4,16 +4,22 @@ import Card from '../UI/Card'
 import './Expense.css'
 
 const Expenses = (props) => {
-	const filterChangeHandler = (selectedYear) => {
-		console.log(selectedYear)
+	const filterChangeHandler = (filteredYear) => {
+		console.log('Year data in Expenses ' + filteredYear)
 	}
+
+	props.items.map((expense) => {
+		console.log(expense)
+	})
 
 	return (
 		<Card className='expenses'>
 			<ExpensesFilter onChangeFilter={filterChangeHandler} />
-			{props.items.map((expense) => (
-				<ExpenseItem key={expense.title} data={expense} />
-			))}
+			{
+				props.items.map((expense) => {
+					return <ExpenseItem key={expense.id} data={expense} />
+				})
+			}
 		</Card>
 	)
 }
