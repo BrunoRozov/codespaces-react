@@ -24,7 +24,7 @@ const DYMMY_EXPENSES = [
     },
     {
         id: 'id4',
-        date: new Date(2023, 04, 02),
+        date: new Date(2023, 4, 2),
         title: 'Jorden 4',
         price: 125.99
     },

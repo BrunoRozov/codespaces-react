@@ -1,7 +1,10 @@
 import './NewExpense.css'
 import ExpenseForm from './ExpenseForm'
+import {useState} from 'react'
 
 const NewExpense = () => {
+    const [editFrom, setFrom] = useState(false)
+
     const saveExpenseDataHandler = (enteredExpenseData) => {
         const expenseData = {
             ...enteredExpenseData,
