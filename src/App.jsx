@@ -22,6 +22,12 @@ const DYMMY_EXPENSES = [
         title: 'New bag',
         price: 139.99
     },
+    {
+        id: 'id4',
+        date: new Date(2023, 04, 02),
+        title: 'Jorden 4',
+        price: 125.99
+    },
 ]
 
 const App = () => {
