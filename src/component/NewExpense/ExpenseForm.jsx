@@ -1,5 +1,5 @@
-import { useState } from "react"
 import './ExpenseForm.css'
+import { useRef, useState } from "react"
 
 const ExpenseForm = (props) => {
     const [userInput, setUserInput] = useState({
@@ -7,7 +7,10 @@ const ExpenseForm = (props) => {
         enteredPrice: '',
         enteredDate: ''
     })
-    console.log(userInput)
+
+    const titleInputRef = useRef()
+    const amountInputRef = useRef()
+    const dateInputRef = useRef()
 
     const titleChangeHandler = (event) => {
         setUserInput({
@@ -54,6 +57,8 @@ const ExpenseForm = (props) => {
                      type="text"
                      onChange={titleChangeHandler}
                      value={userInput.enteredTitle}
+                     id = "title"
+                     ref={titleInputRef}
                      />
                 </div>
                 <div className="new-expense__control">
@@ -64,6 +69,8 @@ const ExpenseForm = (props) => {
                      step="0.01"
                      onChange={priceChangeHandler}
                      value={userInput.enteredPrice}
+                     id = "amount"
+                        ref={amountInputRef}
                     />
                 </div>
                 <div className="new-expense__control">
@@ -71,6 +78,8 @@ const ExpenseForm = (props) => {
                     <input type="date" min="2024-11-12" max="2026-01-31"
                         onChange={dateChangeHandler}
                         value={userInput.enteredDate}
+                        id = "date"
+                        ref={dateInputRef}
                     />
                 </div>
             </div>
